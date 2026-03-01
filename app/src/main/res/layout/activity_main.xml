@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Título da Seção de Saudação -->
+    <TextView
+        android:id="@+id/textViewTituloSaudacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seção de Saudação"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Label para o campo de nome -->
+    <TextView
+        android:id="@+id/textViewLabelNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite seu nome:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTituloSaudacao"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Campo para digitar o nome (EditText) -->
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Seu nome aqui"
+        android:padding="12dp"
+        android:inputType="textPersonName"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLabelNome"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Botão de saudação -->
+    <Button
+        android:id="@+id/buttonSaudacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dizer Olá"
+        android:onClick="onButtonClick"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNome"
+        android:layout_marginTop="16dp"/>
+
+    <!-- TextView para mostrar a saudação -->
+    <TextView
+        android:id="@+id/textViewSaida"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:background="#F0F0F0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonSaudacao"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Linha divisória -->
+    <View
+        android:id="@+id/divisor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999999"
+        app:layout_constraintTop_toBottomOf="@id/textViewSaida"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Título da Calculadora -->
+    <TextView
+        android:id="@+id/textViewTituloCalculadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculadora Simples"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divisor"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Campo para primeiro número -->
+    <EditText
+        android:id="@+id/editTextNumero1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite o primeiro número"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTituloCalculadora"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Campo para segundo número -->
+    <EditText
+        android:id="@+id/editTextNumero2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite o segundo número"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumero1"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Botão de calcular -->
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular Soma"
+        android:onClick="onButtonClick"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumero2"
+        android:layout_marginTop="16dp"/>
+
+    <!-- TextView para mostrar o resultado -->
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:background="#F0F0F0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonCalcular"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
