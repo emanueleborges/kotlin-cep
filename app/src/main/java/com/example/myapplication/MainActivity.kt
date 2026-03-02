@@ -109,7 +109,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    
     private fun handleSaudacao() {
         Log.d(TAG, "handleSaudacao: Iniciando")
         
